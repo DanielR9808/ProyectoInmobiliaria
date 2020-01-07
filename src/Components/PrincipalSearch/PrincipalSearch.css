@@ -1,4 +1,4 @@
-.Combo-de-inmueble{
+.Immovable-type{
     border: solid;
     border-color: black;
     display: flex;
@@ -6,14 +6,16 @@
     width: 20%;
 }
 
-.checkboxes {
-  display: none;
-  border: 1px #dadada solid;
+.Purchase-type{
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
 }
 
-.checkboxes label {
-  display: block;
-}
-.checkboxes label:hover {
-  background-color: #1e90ff;
+.search{
+    display: flex;
+    justify-content: center;
+    width: 60%;
 }
