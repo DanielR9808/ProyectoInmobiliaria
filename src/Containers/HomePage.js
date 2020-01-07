@@ -18,13 +18,9 @@ export default function HomePage() {
                 <Switch>
                     <Route path="/login" component={Login}></Route>
                     <Route path="/register" component={Register}></Route>
-<<<<<<< HEAD
                     <Route path="/inmuebles" component={immovableComp}></Route>
-=======
                     <Route path="/shit" component={proveShit}></Route>
                     <PrincipalSearch></PrincipalSearch>
-                    
->>>>>>> origin/developer1
                 </Switch>
             </Router>
             
