@@ -5,7 +5,7 @@ import Login from '../Components/LoginRegister/Login'
 import Register from '../Components/LoginRegister/Register'
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
 import proveShit from '../Components/Proves/proveShit.js'
-import directoryCard from '../Components/Cards/directoryCard.js'
+
 
 export default function HomePage() {
     
@@ -18,7 +18,7 @@ export default function HomePage() {
                     <Route path="/register" component={Register}></Route>
                     <Route path="/shit" component={proveShit}></Route>
                     <PrincipalSearch></PrincipalSearch>
-                    <directoryCard></directoryCard>
+                    
                 </Switch>
             </Router>
             
