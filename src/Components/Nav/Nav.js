@@ -9,13 +9,13 @@ import {
 
 export default function Nav() {
     return (
-        <nav>
+        <nav className="Navbar">
             <div className="logo">
                 <h1>Inmuebles</h1>
             </div>
             <ul className="nav-links">
                 <li>
-                    <Link className="link" exact to="/">shit</Link>
+                    <Link className="link" exact to="/shit">shit</Link>
                 </li>
                 <li>
                     <Link className="link" to="/login">Ingresar</Link>
