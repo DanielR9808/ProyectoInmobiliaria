@@ -7,7 +7,7 @@ export default function PrincipalSearch() {
     const [tipoInmueble, setTipoInmueble] = useState("Tipo de inmueble")
     const checkboxes = React.createRef()
 
-    const tiposDeInmuebles = ["Casas","Apartementos","Oficinas","Bodegas","Consultorios","Locales","Lotes","Fincas","Edificio de oficinas","Edificio de apartamentos"]
+    const tipoInmuebles = ["Casas","Apartementos","Oficinas","Bodegas","Consultorios","Locales","Lotes","Fincas","Edificio de oficinas","Edificio de apartamentos"]
     const selectedCheckboxes = new Set();
 
     const toggleCheckbox = label  =>{
@@ -30,7 +30,7 @@ export default function PrincipalSearch() {
 
     return (
         <form>
-            <select name="Compra">
+            <select name="Compra" >
                 <option value="Compra nuevo">
                     Compra nuevo
                 </option>

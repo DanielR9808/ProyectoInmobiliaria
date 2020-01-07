@@ -9,7 +9,7 @@ import {
 
 export default function Nav() {
     return (
-        <nav>
+        <nav className="Navbar">
             <div className="logo">
                 <h1>Inmuebles</h1>
             </div>

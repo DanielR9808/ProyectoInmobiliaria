@@ -4,7 +4,7 @@ import Nav from '../Components/Nav/Nav'
 import Login from '../Components/LoginRegister/Login'
 import Register from '../Components/LoginRegister/Register'
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
-
+import "./HomePage.css";
 export default function HomePage() {
     return (
         <>
@@ -15,7 +15,10 @@ export default function HomePage() {
                     <Route path="/register" component={Register}></Route>
                 </Switch>
             </Router>
-            <PrincipalSearch></PrincipalSearch>    
+            <div className="SearchDiv">
+            <PrincipalSearch></PrincipalSearch>  
+            </div>
+              
         </>
     )
 }

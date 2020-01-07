@@ -15,10 +15,10 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start":  "react-scripts start",
-    "build":  "react-scripts build",
-    "dev":    "nodemon src/index.js",
-    "eject":  "react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "nodemon src/index.js",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
