@@ -14,11 +14,15 @@ export default function Nav() {
                 <h1>Inmuebles</h1>
             </div>
             <ul className="nav-links">
+
+                <li>
+                    <Link className="link" exact to="/">Home</Link>
+                </li>
                 <li>
                     <Link className="link" exact to="/shit">shit</Link>
                 </li>
                 <li>
-                    <Link className="link" to="/login">Ingresar</Link>
+                    <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
                 <li>
                     <Link className="link" to="/register">Registrar</Link>
