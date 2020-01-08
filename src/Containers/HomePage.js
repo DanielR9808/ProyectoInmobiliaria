@@ -5,7 +5,7 @@ import Login from '../Components/LoginRegister/Login'
 import Register from '../Components/LoginRegister/Register'
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
 
-import immovableComp from '../Containers/immovableComp'
+import ImmovableComp from '../Containers/immovableComp'
 
 export default function HomePage() {
     return (
@@ -15,7 +15,7 @@ export default function HomePage() {
                 <Switch>
                     <Route path="/login" component={Login}></Route>
                     <Route path="/register" component={Register}></Route>
-                    <Route path="/inmuebles" component={immovableComp}></Route>
+                    <Route path="/inmuebles" component={ImmovableComp}></Route>
                 </Switch>
             </Router>
             <PrincipalSearch></PrincipalSearch>    
