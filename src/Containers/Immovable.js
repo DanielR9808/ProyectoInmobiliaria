@@ -19,12 +19,8 @@ export default function ImmovableComp({ searchingProps}) {
     const [prevPageUrl, setPrevPageUrl] = useState('initialState')
 
     useEffect(() => {
-        axios.get(currentPageUrl)
-            .then((res) => {
-                setImmovable(res.data)
-            })
-            console.log("adsa")
-    }, [currentPageUrl])
+        
+    }, [])
 
     return (
         <>
