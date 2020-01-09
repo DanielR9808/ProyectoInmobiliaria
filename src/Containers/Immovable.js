@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react'
 import './Immovable.css'
-import axios from '../Instances/axios-immovable'
 
 const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
     , "Piscina", "Zonas verdes", "Cancha(s) de tennis", "Cancha(s) de fútbol", "Cancha(s) de Basket", "Verificado"
@@ -17,10 +16,6 @@ export default function ImmovableComp({ searchingProps}) {
     const [currentPageUrl, setCurrentPageUrl] = useState('Immovable.json')
     const [nextPageUrl, setnextPageUrl] = useState('initialState')
     const [prevPageUrl, setPrevPageUrl] = useState('initialState')
-
-    useEffect(() => {
-        
-    }, [])
 
     return (
         <>
