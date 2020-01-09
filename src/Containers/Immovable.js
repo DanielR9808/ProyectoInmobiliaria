@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import './Immovable.css'
+import axios from '../Instances/axios-immovable'
 
-export default function immovableComp({ searchingProps}) {
-    const preferences = ["Amoblado", "Zona para niños","Gimnasio","Cancha(s) de Squash","Acceso para discapacitados"
-    ,"Piscina","Zonas verdes","Cancha(s) de tennis","Cancha(s) de fútbol","Cancha(s) de Basket","Verificado"
-    ,"Cerca Transporte Público","Cerca a Centros Comerciales","Cerca a Parques","Cerca a Supermercados","Cerca a colegios / universidades"
-    ,"Zona de BBQ","Ascensor","Con Balcón","Con Vigilancia","En conjunto cerrado","Cuarto de servicio","Con chimenea"
-    ,"Con deposito","Con zona de lavandería","Se permiten mascotas","Se permite fumar"]
-    const priceRange= [10,29,20,30,41];
+const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
+    , "Piscina", "Zonas verdes", "Cancha(s) de tennis", "Cancha(s) de fútbol", "Cancha(s) de Basket", "Verificado"
+    , "Cerca Transporte Público", "Cerca a Centros Comerciales", "Cerca a Parques", "Cerca a Supermercados", "Cerca a colegios / universidades"
+    , "Zona de BBQ", "Ascensor", "Con Balcón", "Con Vigilancia", "En conjunto cerrado", "Cuarto de servicio", "Con chimenea"
+    , "Con deposito", "Con zona de lavandería", "Se permiten mascotas", "Se permite fumar"]
+
+const priceRange = [10, 29, 20, 30, 41];
+
+export default function ImmovableComp({ searchingProps}) {
+    
+    
+    const [immovable, setImmovable] = useState([])
+    const [currentPageUrl, setCurrentPageUrl] = useState('Immovable.json')
+    const [nextPageUrl, setnextPageUrl] = useState('initialState')
+    const [prevPageUrl, setPrevPageUrl] = useState('initialState')
+
+    useEffect(() => {
+        axios.get(currentPageUrl)
+            .then((res) => {
+                setImmovable(res.data)
+            })
+            console.log("adsa")
+    }, [currentPageUrl])
+
     return (
         <>
+            <button onClick={() => console.log(immovable)}>test</button>
             <div className="filters">
                 <input type="text" placeholder="Filtrar por palabra"/>
                 <div>
@@ -22,11 +41,11 @@ export default function immovableComp({ searchingProps}) {
                 </div>
                 <div>
                     <div>
-                        <label for="priceFromTo">Desde</label>
+                        <label>Desde</label>
                         <input name="priceFromTo" type="text" />
                     </div>
                     <div>
-                        <label for="priceUpTo">Hasta</label>
+                        <label>Hasta</label>
                         <input name="priceUpTo" type="text" />
                     </div>
                 </div>
