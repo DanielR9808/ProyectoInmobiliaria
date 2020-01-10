@@ -2,11 +2,11 @@ import React, { useState, Fragment} from 'react'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
 
-import ImmovableComp from '../Containers/immovableComp'
+import ImmovableComp from './Immovable'
 
 export default function HomePage() {
     return (
-        <>
+    <Fragment>
             <Router>
                 <Nav></Nav>
                 <Switch>
@@ -19,15 +19,15 @@ export default function HomePage() {
                     <Route path="/inmuebles" render={()=>(
                        <ImmovableComp/>   
                     )}></Route>
-                    <Fragment>
+                  
             <div>
                 <PrincipalSearch updateSearchingProps={updateSearchingProps}></PrincipalSearch>
             </div>
-        </Fragment>    
+        
                 </Switch>
             </Router>
             
-        </>
+        </Fragment>
     )
 
 }
