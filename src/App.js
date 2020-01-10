@@ -1,5 +1,6 @@
 import React, { useState, Fragment, useEffect} from 'react'
 import HomePage from './Containers/HomePage'
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './Components/Nav/Nav'
 import Login from './Components/LoginRegister/Login'
