@@ -4,8 +4,7 @@ import Nav from '../Components/Nav/Nav'
 import Login from '../Components/LoginRegister/Login'
 import Register from '../Components/LoginRegister/Register'
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
-
-import immovableComp from '../Containers/immovableComp'
+import ImmovableComp from '../Containers/immovableComp'
 
 export default function HomePage() {
     return (
@@ -13,12 +12,19 @@ export default function HomePage() {
             <Router>
                 <Nav></Nav>
                 <Switch>
-                    <Route path="/login" component={Login}></Route>
-                    <Route path="/register" component={Register}></Route>
-                    <Route path="/inmuebles" component={immovableComp}></Route>
+                    <Route path="/login" render={()=>(
+                       <Login/>   
+                    )}></Route>
+                    <Route path="/register" render={()=>(
+                       <Register/>   
+                    )}></Route>
+                    <Route path="/inmuebles" render={()=>(
+                       <ImmovableComp/>   
+                    )}></Route>
+                    <PrincipalSearch></PrincipalSearch>    
                 </Switch>
             </Router>
-            <PrincipalSearch></PrincipalSearch>    
+            
         </>
     )
 }

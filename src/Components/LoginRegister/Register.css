@@ -1,0 +1,31 @@
+.registerDiv{
+    position:absolute;
+    top:30vh;left: 40vw;
+    height: 300px;width:300px;  
+    border-bottom: 10px solid lightsteelblue;
+    background-color: lightgrey;
+}
+.registerTitle{
+    text-align: center;
+    font-size: 20px;
+}
+
+.form{
+    position:absolute;
+    height: 240px;width: 300px;
+    top:50px;left:0px;
+    border-bottom: 15px solid lightblue;
+    background-color: lightgrey;
+}
+.registerButton{
+    position:absolute;
+    left:110px;bottom:10px;
+}
+input{
+    position: relative;
+    left:50px;
+    height:15px;
+    width: 200px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+}
