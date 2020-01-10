@@ -8,7 +8,7 @@ export default function directoryCard() {
             <div className="enterpriseLogoDiv">
               <image className="enterpriseLogo" id="aqui se pasa el prop de la imagen"/>
             </div>
-            <h className="cardTitle">Bareta SAS</h>
+            <h1 className="cardTitle">Bareta SAS</h1>
             <p>Bogota DC</p>
             </div>
           <ul className="dataList" >

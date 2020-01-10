@@ -1,13 +1,13 @@
-import React, { useState} from 'react'
+import React, { useState, Fragment} from 'react'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
 
 export default function HomePage({ updateSearchingProps}) {
     return (
-        <>
+        <Fragment>
             <div>
                 <PrincipalSearch updateSearchingProps={updateSearchingProps}></PrincipalSearch>
             </div>
-        </>    
+        </Fragment>    
         )
 }

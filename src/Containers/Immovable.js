@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, Fragment} from 'react'
 import './Immovable.css'
 
 const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
@@ -18,7 +18,7 @@ export default function ImmovableComp({ searchingProps}) {
     const [prevPageUrl, setPrevPageUrl] = useState('initialState')
 
     return (
-        <>
+        <Fragment>
             <button onClick={() => console.log(immovable)}>test</button>
             <div className="filters">
                 <input type="text" placeholder="Filtrar por palabra"/>
@@ -49,6 +49,6 @@ export default function ImmovableComp({ searchingProps}) {
                     </ul>
                 </div>
             </div>
-        </>
+        </Fragment>
     )
 }
