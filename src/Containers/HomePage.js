@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState, Fragment} from 'react'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Nav from '../Components/Nav/Nav'
-import Login from '../Components/LoginRegister/Login'
-import Register from '../Components/LoginRegister/Register'
 import PrincipalSearch from '../Components/PrincipalSearch/PrincipalSearch'
+
 import ImmovableComp from '../Containers/immovableComp'
 
 export default function HomePage() {
@@ -21,10 +19,15 @@ export default function HomePage() {
                     <Route path="/inmuebles" render={()=>(
                        <ImmovableComp/>   
                     )}></Route>
-                    <PrincipalSearch></PrincipalSearch>    
+                    <Fragment>
+            <div>
+                <PrincipalSearch updateSearchingProps={updateSearchingProps}></PrincipalSearch>
+            </div>
+        </Fragment>    
                 </Switch>
             </Router>
             
         </>
     )
+
 }
