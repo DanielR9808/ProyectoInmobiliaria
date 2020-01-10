@@ -6,7 +6,7 @@ export default function Login() {
         <div className="loginDiv">
             <h1 className="loginTitle">Iniciar Sesion</h1>
       
-        <div className="form">
+        <div className="forms">
         <form className="loginForm">
             <input type="text" placeholder="Correo electronico" className="emailInput" />
             <input type="password" placeholder="Contraseña"className="passInput"/>

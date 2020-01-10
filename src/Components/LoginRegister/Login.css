@@ -10,27 +10,27 @@
     font-size: 20px;
 }
 
-.form{
+.forms{
     position:absolute;
-    height: 100px;width: 300px;
+    height:100px;width: 300px;
     top:50px;left:0px;
     border-bottom: 15px solid lightblue;
     background-color: lightgrey;
 }
 
 input{
-    position: relative;
+    position: absolute;
     left:50px;
     height:15px;
     width: 200px;
     margin:2px 0;
 }
 .loginButton{
-    position:relative;
-    left:35px;top:5px;
+    position:absolute;
+    left:35px;bottom:10px;
 }
 .registerLink{
     position:absolute;
-    font-size:  15px ;
-    left:140px;top:55px
+    font-size:  13px ;
+    left:140px;bottom:0px
 }  

@@ -3,7 +3,7 @@
     top:30vh;left: 40vw;
     height: 300px;width:300px;  
     border-bottom: 10px solid lightsteelblue;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.76);;
 }
 .registerTitle{
     text-align: center;
