@@ -24,7 +24,7 @@ export default function SeederImmovable(n, ImmobavleTypes, CommonAreas, Immovabl
             Neighbourhood: "texto aqui",
             Parking: (Math.floor(Math.random() * 10) + 1),
             RentCost: (Math.floor(Math.random() * 1003120) + 1213),
-            Zone: "texto aqui",
+            Zone: "texto aqui"
         }
         immovables.push(Immovable)
     }

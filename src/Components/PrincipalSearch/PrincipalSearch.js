@@ -9,7 +9,8 @@ import {
 } from "react-router-dom";
 
 
-export default function PrincipalSearch({ updateSearchingProps}) {
+export default function PrincipalSearch({updateSearchingProps}) {
+    
     const propsObject = {
         purchaseType: "Compra Nuevo",
         immovableType: "",

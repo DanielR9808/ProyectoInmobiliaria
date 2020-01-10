@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://localhost/test';
+const URI = "mongodb+srv://Ryu:Manga123@immovablecluster-1otk4.gcp.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(URI)
-  .then(db => console.log('Db is connected'))
-  .catch(error => console.error(error));
+  .then(db => { console.log("conexion a db"+db)})
+  .catch(err => {console.log(err)})
 
 module.exports = mongoose;

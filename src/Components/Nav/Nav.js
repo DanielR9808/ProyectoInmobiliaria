@@ -27,6 +27,9 @@ export default function Nav() {
                 <li>
                     <Link className="link" to="/register">Registrar</Link>
                 </li>
+                <li>
+                    <Link className="Link" to="/login">Iniciar Sesion </Link>
+                </li>
             </ul>
         </nav>
     )
