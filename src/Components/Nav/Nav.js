@@ -21,6 +21,7 @@ export default function Nav() {
                 <li>
                     <Link className="link" exact to="/shit">shit</Link>
                 </li>
+                
                 <li>
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
@@ -28,7 +29,7 @@ export default function Nav() {
                     <Link className="link" to="/register">Registrar</Link>
                 </li>
                 <li>
-                    <Link className="Link" to="/login">Iniciar Sesion </Link>
+                    <Link className="link" to="/login">Iniciar Sesion </Link>
                 </li>
             </ul>
         </nav>

@@ -10,7 +10,7 @@ export default function Login() {
         password: ''
     })
 
-    const login = () =>{
+   const loginProcess = () =>{
         axios.get(`/api/user/${user}`)
             .then(res =>{
                 setUser(res.data)
@@ -24,15 +24,13 @@ export default function Login() {
       
         <div className="forms">
             <form className="loginForm">
-                <input type="text" placeholder="Correo electronico" className="emailInput" />
-                <input type="password" placeholder="Contraseña"className="passInput"/>
-                <button className="loginButton" onClick={login}>Iniciar sesion</button>
+                <input type="text" placeholder="Correo electronico" className="emailInput" value={this.useState.email}/>
+                <input type="password" placeholder="Contraseña"className="passInput" value={this.useState.password}/>
+                <button className="loginButton" onClick={loginProcess}>Iniciar sesion</button>
                 <Link to="/register" > <p className="registerLink">No estoy registrado :(</p></Link>
             </form> 
         </div>
       
-            
-            
         </div>
     )
 }

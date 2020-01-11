@@ -9,8 +9,7 @@ export default function proveShit() {
            
            Testing Something
         
-           <ImmovableCard></ImmovableCard>
-           <DirectoryCard></DirectoryCard>
+        
            
         </div>
     )

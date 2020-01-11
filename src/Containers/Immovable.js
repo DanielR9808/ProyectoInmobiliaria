@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment} from 'react'
-import './Immovable.css'
+import './immovable.css'
 
 const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
     , "Piscina", "Zonas verdes", "Cancha(s) de tennis", "Cancha(s) de fútbol", "Cancha(s) de Basket", "Verificado"
@@ -19,10 +19,12 @@ export default function ImmovableComp({ searchingProps}) {
 
     return (
         <Fragment>
+           
+
             <button onClick={() => console.log(immovable)}>test</button>
             <div className="filters">
                 <input type="text" placeholder="Filtrar por palabra"/>
-                <div>
+                <div className="priceRange">
                     <label> Rango de precios</label>
                     <select name="rangoDePrecios">
                         {priceRange.map((price) => {
@@ -49,6 +51,7 @@ export default function ImmovableComp({ searchingProps}) {
                     </ul>
                 </div>
             </div>
+      
         </Fragment>
     )
 }

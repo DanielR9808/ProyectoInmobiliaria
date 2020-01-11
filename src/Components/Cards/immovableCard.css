@@ -1,0 +1,19 @@
+.immovable{
+    position:relative;
+    top:20vh;
+    border: lightsteelblue 4px solid;
+    width:500px
+}
+ .dataRow{
+    border-left: lightgrey solid 2px;
+    vertical-align: middle;
+    text-align: left;
+    padding:2px;
+}
+.imageDiv{
+    height: 100px;
+    width: 185px;
+}
+.titleCard{
+    vertical-align: middle;
+}
