@@ -1,7 +1,6 @@
 import React from 'react'
 import {  Link} from "react-router-dom";
 import "./Login.css"
-import axios from 'axios';
 
 export default function Login() {
     
@@ -10,13 +9,7 @@ export default function Login() {
         password: ''
     })
 
-    const login = () =>{
-        axios.get(`/api/user/${user}`)
-            .then(res =>{
-                setUser(res.data)
-            })
-    }
-
+    
 
     return (
         <div className="loginDiv">

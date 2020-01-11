@@ -16,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/immovable', require('./src/routes/immovableRoute'));
+app.use('/api/user', require('./src/routes/userRoute'));
 
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));;

@@ -1,6 +1,18 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./Register.css"
+import axios from 'axios'
 export default function Register() {
+
+    const [user, setUser] = useState({
+        email: 'asdasd',
+        password: 'asdasd'
+    })
+    const x = "123123"
+    useEffect(() => {
+        axios.get(`api/user/${user}`)
+            .then(res => console.log(res))
+    }, [])
+
     return (
         <div className="registerDiv">
             <h1 className="registerTitle">Registro</h1>
