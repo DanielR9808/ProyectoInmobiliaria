@@ -11,34 +11,17 @@ const UserSchema = new mongoose.Schema({
         default: '',
         required: true
     }, 
-    name: {
+    firstname: {
         type: String,
         default: '',
-        required: true
     },
-    lastName: {
+    lastname: {
         type: String,
-        default: '',
-        required: true
+        default: ''
     },
     phone: {
-        type: Number,
-        default: '',
-        required: true
-    },
-    isDeleted:{
-        type:Boolean,
-        default:false
+        type: Number
     }
 })
-
-UserSchema.methods.generateHash = (password) =>{
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8),null)
-}
-
-
-UserSchema.methods.validPassword = (password) => {
-    return bcrypt.compareSync(password, this.password)
-}
 
 module.exports = mongoose.model('User',UserSchema)
