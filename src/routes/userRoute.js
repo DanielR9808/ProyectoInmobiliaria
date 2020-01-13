@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User')
+
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
+
 const {registerValidation, loginValidation} = require('../models/validationUser')
 
 
@@ -64,10 +66,5 @@ router.post('/register', async (req, res) => {
     }
 
 })
-
-router.delete('/:id', async (req, res) => {
-    await Immovable.findByIdAndRemove(req.params.id);
-    res.json({ status: 'Deleted' }); 
-});
 
 module.exports = router;
