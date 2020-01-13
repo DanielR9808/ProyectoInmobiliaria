@@ -28,21 +28,16 @@ export default function App() {
       <Router>
         <Nav></Nav>
         <Switch>
-          <Route path="/" exact="true" render={() =>{
-            <HomePage updateSearchingProps={updateSearchingProps}></HomePage>
-          }}></Route>
-          <Route path="/inmuebles"  render={() =>{
+          <Route path="/" exact="true" render={() =><HomePage updateSearchingProps={updateSearchingProps}></HomePage>}></Route>
+          <Route path="/inmuebles"  render={() =>
             <ImmovablePage searchingProps={searchingProps} > </ImmovablePage>
-          }}></Route>
-          <Route path="/login" render={() =>{
+          }></Route>
+          <Route path="/login" render={() =>
             <Login></Login>
-          }} ></Route>
-          <Route path="/register" render={() =>{
+          } ></Route>
+          <Route path="/register" render={() =>
             <Register></Register>
-          }}></Route>
-          <Route path="/shit" render={() =>{
-
-          }}></Route>
+          }></Route>
         </Switch>
       </Router>
     </Fragment>

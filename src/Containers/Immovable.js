@@ -13,13 +13,10 @@ export default function ImmovableComp({ searchingProps}) {
     
     
     const [immovable, setImmovable] = useState([])
-    const [currentPageUrl, setCurrentPageUrl] = useState('Immovable.json')
-    const [nextPageUrl, setnextPageUrl] = useState('initialState')
-    const [prevPageUrl, setPrevPageUrl] = useState('initialState')
 
     return (
         <Fragment>
-            <button onClick={() => console.log(immovable)}>test</button>
+            <button onClick={() => console.log(process.env.TOKEN_SECRET)}>test</button>
             <div className="filters">
                 <input type="text" placeholder="Filtrar por palabra"/>
                 <div>

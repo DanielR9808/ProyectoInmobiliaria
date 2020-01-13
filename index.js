@@ -20,7 +20,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes
-
 app.use('/api/immovable', require('./src/routes/immovableRoute'));
 app.use('/api/user', require('./src/routes/userRoute'));
 
