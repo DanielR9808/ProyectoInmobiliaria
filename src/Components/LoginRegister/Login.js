@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {  Link} from "react-router-dom";
 import "./Login.css"
 import axios from 'axios';
@@ -10,23 +10,37 @@ export default function Login() {
         password: ''
     })
 
-   const loginProcess = () =>{
-        axios.get(`/api/user/${user}`)
-            .then(res =>{
-                setUser(res.data)
-            })
+
+
+
+    const handleChange = (e) =>{
+        let copy = user
+        copy[e.target.name] = e.target.value
+        setUser(copy)
+
     }
 
+    const login = (e) => {
+        console.log(user)
+        axios.post('/api/user/login', user)
+            .then(res => {
+                console.log(res.headers.auth-token)
+            })
+
+        e.preventDefault()
+    }
 
     return (
         <div className="loginDiv">
             <h1 className="loginTitle">Iniciar Sesion</h1>
       
         <div className="forms">
-            <form className="loginForm">
-                <input type="text" placeholder="Correo electronico" className="emailInput" value={this.useState.email}/>
-                <input type="password" placeholder="Contraseña"className="passInput" value={this.useState.password}/>
-                <button className="loginButton" onClick={loginProcess}>Iniciar sesion</button>
+
+                <form className="loginForm" onSubmit={login}>
+                <input type="text" placeholder="Correo electronico" className="emailInput" name="email" onChange={handleChange} />
+                <input type="password" placeholder="Contraseña" className="passInput" name="password" onChange={handleChange} />
+                <button className="loginButton" type="submit">Iniciar sesion</button>
+
                 <Link to="/register" > <p className="registerLink">No estoy registrado :(</p></Link>
             </form> 
         </div>

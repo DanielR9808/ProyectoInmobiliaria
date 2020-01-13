@@ -1,35 +1,49 @@
+
 import React from 'react'
 import './immovableCard.css'
+
 export default function immovableCard() {
     return (
-       <div className ="immovable">
-            <table>
-                <td><div className="imageDiv"></div></td>
-                <th className="titleCard">Apartamento en venta, algun sitio</th>
-            </table>
-            <table className="tableData">
-                
-                <tr>
-                    <th className="dataRow">Precio de venta</th>
-                    <th className="dataRow">Area Construida</th>
-                    <th className="dataRow">Hab</th>
-                    <th className="dataRow">Baños</th>
-                    <th className="dataRow">Garajes</th>
-                </tr>
-                <tr>
-                    <td className="dataRow">$500.000.000</td>
-                    <td className="dataRow">200 m2</td>
-                    <td className="dataRow">3</td>
-                    <td className="dataRow">2</td>
-                    <td className="dataRow">1</td>
-                </tr>
-                <tr>
-                    <td className="dataRow"><img></img> Favorito</td>
-                    <td className="dataRow"><img></img> Mas detalles</td>
-                    <td ><button>Contactar</button></td>
-                </tr>
-            </table>
-           
-       </div>
+    <div className="immovable">
+        <div className="imageDiv">
+        <img></img>
+        </div>
+
+        <h5 className="immovableTitle"> Apartamento en venta, alguna parte </h5>
+            <div className="dataDiv">
+                <p className="nameLabel">Precio de Venta</p >
+                <p className="dataLabel"> $200.000.000</p>
+            </div>
+            <div className="dataDiv">
+                <p className="nameLabel">Area construida</p>
+                <p className="dataLabel">70.0 m2</p>
+            </div>
+            <div className="dataDiv">
+                <p className="nameLabel">Hab</p>
+                <p className="dataLabel">2</p>
+            </div>
+            <div className="dataDiv">
+                <p className="nameLabel">Baños</p>
+                <p className="dataLabel">2</p>
+            </div>
+            <div className="dataDiv">
+                <p className="nameLabel">Garajes</p>
+                <p className="dataLabel">1</p>
+            </div>
+            <div className="shareDiv">
+                <div className="shareAux">
+                    <img></img>
+                    <p className="shareLabel">Favorito</p>
+                </div>
+                <div className="shareAux">
+                    <img></img>
+                    <p className="shareLabel">Mas detalles</p>  
+                </div>
+                <button className="shareButton">Contactar</button>
+
+            </div>
+    </div>
+
     )
+
 }

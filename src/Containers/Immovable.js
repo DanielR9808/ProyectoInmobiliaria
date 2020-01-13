@@ -1,5 +1,8 @@
+
 import React, { useEffect, useState, Fragment} from 'react'
-import './immovable.css'
+import ImmovableCard from './../Components/Cards/immovableCard'
+import './Immovable.css'
+import immovableCard from './../Components/Cards/immovableCard';
 
 const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
     , "Piscina", "Zonas verdes", "Cancha(s) de tennis", "Cancha(s) de fútbol", "Cancha(s) de Basket", "Verificado"
@@ -8,6 +11,9 @@ const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de S
     , "Con deposito", "Con zona de lavandería", "Se permiten mascotas", "Se permite fumar"]
 
 const priceRange = [10, 29, 20, 30, 41];
+const hab=[1,2,3,4,5];
+const bath=[1,2,3,4,5];
+const garage=[1,2,3,4,5]
 
 export default function ImmovableComp({ searchingProps}) {
     
@@ -19,36 +25,68 @@ export default function ImmovableComp({ searchingProps}) {
 
     return (
         <Fragment>
-            <button onClick={() => console.log(immovable)}>test</button>
-            <div className="filters">
-                <input type="text" placeholder="Filtrar por palabra"/>
-                <div>
-                    <label> Rango de precios</label>
-                    <select name="rangoDePrecios">
-                        {priceRange.map((price) => {
-                            return <option value={price} >{price}</option>
-                        })}
-                    </select>    
-                </div>
-                <div>
-                    <div>
-                        <label>Desde</label>
-                        <input name="priceFromTo" type="text" />
+           
+                <button onClick={() => console.log(immovable)}>test</button>
+                <div className="filters">
+
+                    <div className="Quantity">
+                        <label className="priceParameterLabel"> Rango de precios</label>
+                        <select name="priceRange" className="priceSelect">
+                            {priceRange.map((price) => {
+                                return <option value={price} >{price}</option>
+                            })}
+                        </select>    
+                    
+                    
+                        
+                        
+                    </div>  
+                    <div className="Quantity">
+                        <label className="priceSTLabel">Desde</label>
+                        <label className="priceSTLabel">Hasta</label>
+                        <input name="priceFromTo" type="text" className="priceSTInput" />
+                        <input name="priceUpTo" type="text" className="priceSTInput"/>
                     </div>
-                    <div>
-                        <label>Hasta</label>
-                        <input name="priceUpTo" type="text" />
+                    <div className="Quantity">
+                     <label className="quantityLabel">Habitaciones</label>
+                        <ul>
+                        {hab.map((habs)=>{
+                            return <li className="quantityLi"><button className="quantityButton">{habs}</button></li>
+                        })} 
+                        </ul>
                     </div>
+                    <div className="Quantity">
+                     <label className="quantityLabel">Baños</label>
+                        <ul>
+                        {bath.map((baths)=>{
+                            return <li className="quantityLi"><button className="quantityButton">{baths}</button></li>
+                        })} 
+                        </ul>
+                    </div>
+                    <div className="Quantity">
+                     <label className="quantityLabel">Garajes</label>
+                        <ul>
+                        {garage.map((garages)=>{
+                            return <li className="quantityLi"><button className="quantityButton">{garages}</button></li>
+                        })} 
+                        </ul>
+                    </div>
+                    <div className="preferences">
+                        <h1 className="preferencesTitle"> Me gustaria que tenga</h1>
+                        <ul>
+                            {preferences.map((preference) =>{
+                            return <li ><input type="checkbox" className="checkPreference" value={preference} onChange={(e) => console.log(e.target.value)} /><label for={preference} className="preference">{preference}</label></li> 
+                            })}
+                        </ul>
+                    </div>
+                    <button className="preferencesButton"> Buscar</button>
                 </div>
-                <div className="preferences">
-                    <h1>Me gustaria que tenga</h1>
-                    <ul>
-                        {preferences.map((preference) =>{
-                        return <li className="preference"><input type="checkbox" value={preference} onChange={(e) => console.log(e.target.value)} />{preference}</li> 
-                        })}
-                    </ul>
+                <div className="immovableDiv">
+                    <ImmovableCard></ImmovableCard>
                 </div>
-            </div>
+                    
+           
         </Fragment>
     )
 }
+
