@@ -26,7 +26,6 @@ export default function App() {
 
   return (
     <Fragment>
-       
       <Router>
       <Nav></Nav>
         <Switch>
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/inmuebles">
             <ImmovablePage searchingProps={searchingProps} > </ImmovablePage>
           </Route>
-          
           <Route path="/register" component={Register}></Route>
           <Route path="/shit" component={proveShit  }></Route>
           <Route path="/login" component={Login}></Route>

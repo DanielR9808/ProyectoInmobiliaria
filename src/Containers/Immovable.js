@@ -19,12 +19,10 @@ export default function ImmovableComp({ searchingProps}) {
 
     return (
         <Fragment>
-           
-
             <button onClick={() => console.log(immovable)}>test</button>
             <div className="filters">
                 <input type="text" placeholder="Filtrar por palabra"/>
-                <div className="priceRange">
+                <div>
                     <label> Rango de precios</label>
                     <select name="rangoDePrecios">
                         {priceRange.map((price) => {
@@ -51,7 +49,6 @@ export default function ImmovableComp({ searchingProps}) {
                     </ul>
                 </div>
             </div>
-      
         </Fragment>
     )
 }

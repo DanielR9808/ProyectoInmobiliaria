@@ -3,10 +3,6 @@ import './immovableCard.css'
 export default function immovableCard() {
     return (
        <div className ="immovable">
-            
-                
-            
-     
             <table>
                 <td><div className="imageDiv"></div></td>
                 <th className="titleCard">Apartamento en venta, algun sitio</th>
