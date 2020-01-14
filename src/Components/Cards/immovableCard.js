@@ -1,17 +1,18 @@
 import React from 'react'
 import './immovableCard.css'
 
-export default function immovableCard() {
+export default function ImmovableCard({ immovable}) {
+    
     return (
     <div className="immovable">
         <div className="imageDiv">
         <img></img>
         </div>
-
+        <button onClick={() =>{console.log(immovable)}}>asdasd</button>
         <h5 className="immovableTitle"> Apartamento en venta, alguna parte </h5>
             <div className="dataDiv">
                 <p className="nameLabel">Precio de Venta</p >
-                <p className="dataLabel"> $200.000.000</p>
+                <p className="dataLabel"> {immovable.RentCost}</p>
             </div>
             <div className="dataDiv">
                 <p className="nameLabel">Area construida</p>

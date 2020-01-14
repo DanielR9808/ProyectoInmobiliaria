@@ -94,9 +94,15 @@ button.preferencesButton{
     top:15px;
     left:160px;
 }
-div.immovableDiv{
-    position: absolute;
-    left:45vw;top:0vh
-  
-   
+.immovableDiv{
+    flex-direction: column;
+    height: 100%;
+    right: 0;
+    width: 50%;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
