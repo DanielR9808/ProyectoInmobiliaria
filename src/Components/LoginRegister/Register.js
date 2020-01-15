@@ -18,8 +18,6 @@ export default function Register() {
         let copy = user
         copy[e.target.name] = e.target.value
         setUser(copy)
-        console.log(user);
-        
     }
 
     const changeVerifyPassword = (e) =>{
