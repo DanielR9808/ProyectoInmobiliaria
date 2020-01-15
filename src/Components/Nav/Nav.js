@@ -21,10 +21,10 @@ export default function Nav() {
                 <li>
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
-                
                 <li>
-                    <Link className="link" to="/login">Login</Link>
+                    <Link className="link" to="/immovableUnit">View</Link>
                 </li>
+               
                 <li>
                     <Link className="link" to="/register">Registrar</Link>
                 </li>
