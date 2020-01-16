@@ -1,0 +1,99 @@
+div.immovableViewContent{
+    position: absolute;
+    width:100vw;height: 100vh;
+    padding:0;
+    margin:0;
+}
+div.carrousel{
+    position:relative;
+    width: 80vw;
+    height: 25vh;
+    border: solid black 3px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.immovableSpecs{
+    position:relative;
+    width: 75vw;
+    height: 19vh;
+    border-left: solid black 3px;
+    border-right:  solid black 3px;
+    border-top: solid black 3px;
+    display:block;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.priceDiv{
+    position:relative;
+    border-bottom: black solid 3px;
+    width:75vw;height: 6vh;
+}
+div.specDiv{
+    position: relative;
+    display:inline-block;
+    border-left: black 2px;
+    width:37.5vw;height: 5vh;
+}
+div.immovableDetails{
+    position:relative;
+    width: 75vw;
+    height: 16vh;
+    border-bottom: solid black 3px;
+    display:block;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.descriptionBody{
+    text-align: justify;
+    color: lightgray;
+    font-size: 15px;
+}
+label.report{
+    position: relative;
+    font-size: 16px;
+   
+}
+div.generalDescription{
+    position:relative;
+    width: 75vw;
+    height: 30vh;
+    border:black solid 3px;
+    display:block;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto; 
+}
+div.featureDiv{
+    position: relative;
+    display:inline-block;
+    width:25vw;height: 25vh;
+}
+label.featureTitle{
+    display:block;
+    position: relative;
+    margin-bottom:4vh;
+    margin-left: 2vw;
+
+}
+div.commonAreas{
+    position:relative;
+    width: 75vw;
+    height: 30vh;
+    border:black solid 3px;
+    display:block;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto; 
+}
+ul.commonPlaces{
+columns:3;
+column-gap: 25vw;
+row-gap: 10vh;
+}
+li{
+    position: relative;
+
+}

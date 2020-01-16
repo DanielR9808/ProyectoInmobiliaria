@@ -9,13 +9,12 @@ export default function Login() {
         email: '',
         password: ''
     })
-
-
-
+    
     const handleChange = (e) =>{
         let copy = user
         copy[e.target.name] = e.target.value
         setUser(copy)
+
     }
 
     const login = (e) => {
@@ -32,16 +31,16 @@ export default function Login() {
             <h1 className="loginTitle">Iniciar Sesion</h1>
       
         <div className="forms">
+
                 <form className="loginForm" onSubmit={login}>
                 <input type="text" placeholder="Correo electronico" className="emailInput" name="email" onChange={handleChange} />
                 <input type="password" placeholder="Contraseña" className="passInput" name="password" onChange={handleChange} />
                 <button className="loginButton" type="submit">Iniciar sesion</button>
+
                 <Link to="/register" > <p className="registerLink">No estoy registrado :(</p></Link>
             </form> 
         </div>
       
-            
-            
         </div>
     )
 }

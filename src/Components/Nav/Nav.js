@@ -17,15 +17,11 @@ export default function Nav() {
                 <li>
                     <Link className="link" exact to="/">Home</Link>
                 </li>
-                
                 <li>
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
                 <li>
-                    <Link className="link" to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link className="link" to="/register">Registrar</Link>
+                    <Link className="link" to="/login">Iniciar Sesion </Link>
                 </li>
             </ul>
         </nav>

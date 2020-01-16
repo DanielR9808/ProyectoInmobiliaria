@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, Fragment} from 'react'
 import ImmovableCard from './../Components/Cards/immovableCard'
 import './Immovable.css'
@@ -105,3 +106,4 @@ export default function ImmovableComp({ searchingProps}) {
         </Fragment>
     )
 }
+

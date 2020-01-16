@@ -5,6 +5,7 @@ import Nav from './Components/Nav/Nav'
 import Login from './Components/LoginRegister/Login'
 import Register from './Components/LoginRegister/Register'
 import ImmovablePage from './Containers/Immovable'
+import ImmovableUnit from './Containers/immovableUnit.js'
 
 import './App.css'
 
@@ -26,8 +27,9 @@ export default function App() {
   return (
     <Fragment>
       <Router>
-        <Nav></Nav>
+      <Nav></Nav>
         <Switch>
+
           <Route path="/" exact="true" render={() =><HomePage updateSearchingProps={updateSearchingProps}></HomePage>}></Route>
           <Route path="/inmuebles"  render={() =>
             <ImmovablePage searchingProps={searchingProps} > </ImmovablePage>
@@ -37,6 +39,9 @@ export default function App() {
           } ></Route>
           <Route path="/register" render={() =>
             <Register></Register>
+          }></Route>
+          <Route path="/immovableUnit" render={()=>
+            <ImmovableUnit></ImmovableUnit>
           }></Route>
         </Switch>
       </Router>

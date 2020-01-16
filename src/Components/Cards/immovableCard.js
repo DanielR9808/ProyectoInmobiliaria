@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './immovableCard.css'
 
@@ -8,7 +9,6 @@ export default function ImmovableCard({ immovable}) {
         <div className="imageDiv">
         <img></img>
         </div>
-        <button onClick={() =>{console.log(immovable)}}>asdasd</button>
         <h5 className="immovableTitle"> Apartamento en venta, alguna parte </h5>
             <div className="dataDiv">
                 <p className="nameLabel">Precio de Venta</p >
@@ -45,4 +45,5 @@ export default function ImmovableCard({ immovable}) {
     </div>
 
     )
+
 }
