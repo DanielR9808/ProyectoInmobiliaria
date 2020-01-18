@@ -3,6 +3,7 @@ import React, { useEffect, useState, Fragment} from 'react'
 import ImmovableCard from './../Components/Cards/immovableCard'
 import './Immovable.css'
 import immovableCard from './../Components/Cards/immovableCard';
+import { STATES } from 'mongoose';
 
 const preferences = ["Amoblado", "Zona para niños", "Gimnasio", "Cancha(s) de Squash", "Acceso para discapacitados"
     , "Piscina", "Zonas verdes", "Cancha(s) de tennis", "Cancha(s) de fútbol", "Cancha(s) de Basket", "Verificado"
@@ -18,10 +19,20 @@ const garage=[1,2,3,4,5]
 export default function ImmovableComp({ searchingProps}) {
     
     
+    
     const [immovable, setImmovable] = useState([])
     const [currentPageUrl, setCurrentPageUrl] = useState('Immovable.json')
     const [nextPageUrl, setnextPageUrl] = useState('initialState')
     const [prevPageUrl, setPrevPageUrl] = useState('initialState')
+
+    renderImmovable=()=>{
+
+
+        return(
+            immovable.map((object, index)=>
+            <ImmovableCard key={index}  id={immovable.id}  />)
+        )
+    }
 
     return (
         <Fragment>
@@ -82,6 +93,7 @@ export default function ImmovableComp({ searchingProps}) {
                     <button className="preferencesButton"> Buscar</button>
                 </div>
                 <div className="immovableDiv">
+          
                     <ImmovableCard></ImmovableCard>
                 </div>
                     
