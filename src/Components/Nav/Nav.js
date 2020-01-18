@@ -2,8 +2,6 @@ import React from "react";
 import './Nav.css'
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
 
@@ -15,22 +13,12 @@ export default function Nav() {
             </div>
             <ul className="nav-links">
                 <li>
-                    <Link className="link" exact to="/">Home</Link>
+                    <Link className="link" to="/">Home</Link>
                 </li>
-                
                 <li>
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
-                <li>
-                    <Link className="link" to="/immovableUnit">View</Link>
-                </li>
-               
-                <li>
-                    <Link className="link" to="/register">Registrar</Link>
-                </li>
-                <li>
-                    <Link className="link" to="/login">Iniciar Sesion </Link>
-                </li>
+             
             </ul>
         </nav>
     )

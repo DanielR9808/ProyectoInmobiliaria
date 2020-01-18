@@ -2,29 +2,30 @@
 import React from 'react'
 import './immovableCard.css'
 
-export default function immovableCard() {
+export default function ImmovableCard({ immovable}) {
+    
     return (
     <div className="immovable">
         <div className="imageDiv">
         <img></img>
         </div>
-
-        <h5 className="immovableTitle"> Apartamento en venta, alguna parte </h5>
+        <h5 className="immovableTitle"> {immovable.Details} </h5>
             <div className="dataDiv">
                 <p className="nameLabel">Precio de Venta</p >
-                <p className="dataLabel"> $200.000.000</p>
+                 <p className="dataLabel">{immovable.RentCost}</p>
+               
             </div>
             <div className="dataDiv">
                 <p className="nameLabel">Area construida</p>
-                <p className="dataLabel">70.0 m2</p>
+                <p className="dataLabel">{immovable.BuiltArea} m</p>
             </div>
             <div className="dataDiv">
                 <p className="nameLabel">Hab</p>
-                <p className="dataLabel">2</p>
+                <p className="dataLabel">{immovable.Bedrooms}</p>
             </div>
             <div className="dataDiv">
                 <p className="nameLabel">Baños</p>
-                <p className="dataLabel">2</p>
+    <p className="dataLabel">{immovable.Bathrooms}</p>
             </div>
             <div className="dataDiv">
                 <p className="nameLabel">Garajes</p>

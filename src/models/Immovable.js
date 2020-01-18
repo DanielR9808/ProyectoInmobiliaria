@@ -20,6 +20,7 @@ const ImmovableSchema = new Schema({
   Neighbourhood: { type: String, required: true },
   Parking: { type: Number, required: true },
   RentCost: { type: Number, required: true },
+  BuyCost:{type:Number, required:true},
   Zone: { type: String, required: true },
 });
 

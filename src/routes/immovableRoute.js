@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
+const pagination = require('./pagination')
 const Immovable = require('../models/Immovable');
 
-router.get('/', async (req, res) => {
-  const immovable = await Immovable.find();
-  res.json(immovable);
+//usar pagination como middleware y enviar la respuesta que nos de este middleware
+router.get('/', pagination(Immovable), async (req, res) => {
+  res.json(res.paginatedresults);
 });
 
 router.get('/:id', async (req, res) => {

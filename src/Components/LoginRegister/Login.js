@@ -9,10 +9,7 @@ export default function Login() {
         email: '',
         password: ''
     })
-
-
-
-
+    
     const handleChange = (e) =>{
         let copy = user
         copy[e.target.name] = e.target.value
@@ -21,10 +18,9 @@ export default function Login() {
     }
 
     const login = (e) => {
-        console.log(user)
         axios.post('/api/user/login', user)
             .then(res => {
-                console.log(res.headers.auth-token)
+                console.log(res)
             })
 
         e.preventDefault()

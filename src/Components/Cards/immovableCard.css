@@ -1,8 +1,8 @@
 
 .immovable{
-    position:absolute;
-    top:20vh;
-    width: 48vw;height:27   vh;
+    position:relative;
+    display: block;
+    margin-bottom:15px;
     border:solid black 2px;
 }
 h5.immovableTitle{
@@ -21,7 +21,6 @@ div.dataDiv{
 }
 
 p.nameLabel{
-    
   font-size: 11px;
   color:lightgrey;
   margin:0;
