@@ -33,8 +33,8 @@ export default function App() {
           <Route path="/inmuebles"  render={() =>
             <ImmovablePage searchingProps={searchingProps} > </ImmovablePage>
           }></Route>
-       
-       
+          <Route path="/immovableUnit/" render={()=><ImmovableUnit ></ImmovableUnit>}></Route>
+          
         </Switch>
       </Router>
     </Fragment>

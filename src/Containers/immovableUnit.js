@@ -2,6 +2,10 @@ import React,{ useState, Fragment, useEffect} from 'react'
 import './immovableUnit.css'
 
 export default function immovableUnit(){
+
+    const [immovable,setImmovable]= useState()
+
+   
     return(
 
     <div className="immovableViewContent">

@@ -1,6 +1,7 @@
 
 import React from 'react'
 import './immovableCard.css'
+import {Link} from 'react-router-dom'
 
 export default function ImmovableCard({ immovable}) {
     
@@ -9,7 +10,8 @@ export default function ImmovableCard({ immovable}) {
         <div className="imageDiv">
         <img></img>
         </div>
-        <h5 className="immovableTitle"> {immovable.Details} </h5>
+        <Link to={'/immovableUnit/'+immovable._id} >HERE</Link>
+        <h5 className="immovableTitle"> {immovable.ShortDetails} </h5>
             <div className="dataDiv">
                 <p className="nameLabel">Precio de Venta</p >
                  <p className="dataLabel">{immovable.RentCost}</p>

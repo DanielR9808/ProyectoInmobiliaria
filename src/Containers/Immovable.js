@@ -2,10 +2,6 @@
 import React, { useEffect, useState, Fragment} from 'react'
 import ImmovableCard from './../Components/Cards/immovableCard'
 import './Immovable.css'
-
-import immovableCard from './../Components/Cards/immovableCard';
-import { STATES } from 'mongoose';
-
 import axios from 'axios';
 
 
@@ -111,7 +107,7 @@ export default function ImmovableComp({ searchingProps}) {
             </div>
             <div className="immovableDiv">
                 {immovable.map((immo, index)=>
-                <ImmovableCard key={index}immovable={immo}/>)}
+                <ImmovableCard key={index} immovable={immo}/>)}
               
             </div>
         </Fragment>
