@@ -1,11 +1,11 @@
 import React,{ useState, Fragment, useEffect} from 'react'
 import './immovableUnit.css'
 
-export default function immovableUnit(){
+export default function immovableUnit(props){
 
     const [immovable,setImmovable]= useState()
 
-   
+   console.log(props.match.params.id)
     return(
 
     <div className="immovableViewContent">
