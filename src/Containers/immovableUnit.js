@@ -1,10 +1,20 @@
 import React,{ useState, Fragment, useEffect} from 'react'
 import './immovableUnit.css'
+import axios from 'axios'
 
 export default function immovableUnit(props){
 
     const [immovable,setImmovable]= useState()
+    const immovableId= props.match.params.id
 
+    useEffect(()=>{
+        axios.get("api/immovable/"+immovableId)
+        .then(res=>{
+            
+            console.log(res)
+            
+        })
+    })
    console.log(props.match.params.id)
     return(
 
@@ -15,7 +25,7 @@ export default function immovableUnit(props){
         <div className="immovableSpecs">
             <div className="priceDiv">
                 <label className="specTitle">Valor venta</label>
-                <label className="specPrice"></label>
+                <label className="specPrice">{immovable.RentCost}</label>
             </div>
             <div className="priceDiv">
             <div className="specDiv">
