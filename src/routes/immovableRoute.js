@@ -9,7 +9,7 @@ router.get('/', pagination(Immovable), async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  const immovable = await Immovable.findById(req.params.id);
+  const immovable = await Immovable.findById(req.params.id) ;
   res.json(immovable);
 });
 

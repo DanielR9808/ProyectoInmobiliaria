@@ -1,11 +1,25 @@
 import React,{ useState, Fragment, useEffect} from 'react'
 import './immovableUnit.css'
+import axios from 'axios'
 
 export default function immovableUnit(props){
 
-    const [immovable,setImmovable]= useState()
-
+    const [immovableUnit,setImmovable]= useState()
+    const immovableId=props.match.params.id
+    useEffect(()=>{
+        
+        axios.get('/api/immovable/'+immovableId)
+        .then(res =>{
+            console.log(res)
+          
+        })
+       
+        .catch(console.log("no hemos podido traer este inmueble :c"))
+     
+    })
    console.log(props.match.params.id)
+  
+
     return(
 
     <div className="immovableViewContent">
