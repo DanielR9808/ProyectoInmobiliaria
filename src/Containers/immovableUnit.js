@@ -4,18 +4,23 @@ import axios from 'axios'
 
 export default function immovableUnit(props){
 
-    const [immovable,setImmovable]= useState()
-    const immovableId= props.match.params.id
-
+  
+    const immovableId=props.match.params.id
+    console.log(immovableId)
     useEffect(()=>{
-        axios.get("api/immovable/"+immovableId)
-        .then(res=>{
-            
-            console.log(res)
-            
+        
+        axios.get('/api/immovable/'+immovableId)
+        .then(res =>{
+            console.log(res.data[0]);
         })
+        .catch(err => {
+            console.log("no hemos podido traer este inmueble :c");
+        })
+     
     })
    console.log(props.match.params.id)
+  
+
     return(
 
     <div className="immovableViewContent">
@@ -25,7 +30,7 @@ export default function immovableUnit(props){
         <div className="immovableSpecs">
             <div className="priceDiv">
                 <label className="specTitle">Valor venta</label>
-                <label className="specPrice">{immovable.RentCost}</label>
+                <label className="specPrice"></label>
             </div>
             <div className="priceDiv">
             <div className="specDiv">

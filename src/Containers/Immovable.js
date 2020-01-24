@@ -32,7 +32,6 @@ export default function ImmovableComp({ searchingProps}) {
                 
                 setNextPageUrl(`/api/immovable?limit=${res.data.next.limit}&page=${res.data.next.page}`)
                 if(res.data.previous) setPrevPageUrl(`/api/immovable?limit=${res.data.previous.limit}&page=${res.data.previous.page}`)
-                console.log(res.data.results)
                 setImmovable(res.data.results)
                 
             })

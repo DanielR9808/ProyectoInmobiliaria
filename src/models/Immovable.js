@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const ImmovableSchema = new Schema({
+  _id:{type:Object,required:true},
   Adress: { type: String, required: true},
   Bathrooms: { type: Number, required: true },
   Bedrooms: { type: Number, required: true },
