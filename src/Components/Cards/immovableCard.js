@@ -7,6 +7,7 @@ export default function ImmovableCard({ immovable}) {
     
     return (
     <div className="immovable">
+        {console.log(immovable)}
         <div className="imageDiv">
         <img></img>
         </div>

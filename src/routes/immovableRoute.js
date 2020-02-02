@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const pagination = require('./pagination')
+const immoMiddle=require('./immoMiddle')
 const Immovable = require('../models/Immovable');
 const ObjectId = require('mongoose').Types.ObjectId; 
 //usar pagination como middleware y enviar la respuesta que nos de este middleware
 router.get('/', pagination(Immovable), async (req, res) => {
   res.json(res.paginatedresults);
 });
-
-router.get('/:id', async (req, res) => {
+//usar un middleware para traer solo un inmueble y lidiar con las promesas
+router.get('/:id',async (req, res) => {
   const immovable = await Immovable.find({_id: new ObjectId(req.params.id)});
-  res.json(immovable);
+
+    res.json(immovable);
+  
+  
 });
 
 router.post('/', async (req, res) => {

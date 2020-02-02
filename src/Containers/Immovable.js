@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, Fragment} from 'react'
+import React, {  useEffect,useState, Fragment} from 'react'
 import ImmovableCard from './../Components/Cards/immovableCard'
 import './Immovable.css'
 import axios from 'axios';
