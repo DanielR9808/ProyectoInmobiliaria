@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './Components/Nav/Nav'
 import ImmovablePage from './Containers/Immovable'
 import ImmovableUnit from './Containers/immovableUnit.js'
-
+import Map from './Components/Maps/TestingMap.js'
 import './App.css'
 
 export default function App() {
@@ -36,6 +36,7 @@ export default function App() {
          
           
         </Switch>
+       
         <Route path="/immovableUnit/:id" component={ImmovableUnit}></Route>
       </Router>
     </Fragment>

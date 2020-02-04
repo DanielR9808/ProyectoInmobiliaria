@@ -18,6 +18,9 @@ export default function Nav() {
                 <li>
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
+                <li>
+                    <Link className="link" to="/map"> Map</Link>
+                </li>
              
             </ul>
         </nav>

@@ -1,5 +1,5 @@
 import React,{ useState, Fragment, useEffect} from 'react'
-
+import Maps from './../Components/Maps/TestingMap'
 import './immovableUnit.css'
 import axios from 'axios'
 
@@ -92,7 +92,7 @@ function renderGeneralDescription(immo){
 
 function renderCommonAreas(immo){
    var commonAreas=immo.CommonAreas
-   console.log(commonAreas)
+   
     return(
         <div className="commonAreas">
             <h3 className="descriptionTitle">Áreas comunes y recreación</h3>
@@ -108,6 +108,20 @@ function renderCommonAreas(immo){
             </div>
         </div>
     )
+}
+function renderMaps(immo){
+    return(
+        <div className="MapTitleContainer">
+            <h3 className="descriptionTitle"> La Ubicación del Inmueble</h3>
+            <div className="MapContainer">
+            
+            <Maps props={immo}></Maps>
+        </div>
+        </div>
+        
+    )
+    
+
 }
 export default function immovableUnit (props){
     const [immovable,setImmovable]=useState()
@@ -157,6 +171,10 @@ export default function immovableUnit (props){
         
             {immovable? renderCommonAreas(immovable):
             <div className="SpinnerDiv"><div className="lds-facebook"><div></div><div></div><div></div></div></div>}
+            
+            {immovable? renderMaps(immovable):
+            <div className="SpinnerDiv"><div className="lds-facebook"><div></div><div></div><div></div></div></div>}
+   
     </div>
     </Fragment>
     

@@ -13,6 +13,7 @@ div.carrousel{
     display:block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3vh;
 }
 div.immovableSpecs{
     position:relative;
@@ -84,7 +85,7 @@ div.featureDiv{
     max-width: 25vw;
     flex-wrap: wrap;
     flex-direction: column;
-    border-top: solid black 2px;
+   
     width:25vw;
 }
 label.featureTitle, label.feature{
@@ -110,6 +111,9 @@ div.commonAreas{
     margin-left: auto;
     margin-right: auto; 
 }
+h3.descriptionTitle{
+  margin-left: 2vw;
+}
 ul.commonPlaces{
 columns:3;
 column-gap: 20vw;
@@ -117,6 +121,7 @@ row-gap: 2vh;
 }
 li{
     position: relative;
+    
 }
 .lds-facebook {
     display: inline-block;
@@ -159,3 +164,18 @@ li{
       height: 32px;
     }
   }
+  div.MapTitleContainer{
+    display:block;
+    width: 75vw;
+    height:75vh;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    border:black solid 3px;
+  }
+div.MapContainer{
+  width: 98%;
+  height:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
