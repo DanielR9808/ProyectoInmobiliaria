@@ -4,37 +4,29 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './Components/Nav/Nav'
 import ImmovablePage from './Containers/Immovable'
 import ImmovableUnit from './Containers/immovableUnit.js'
+import Proving from './Components/Proves/proveShit'
 import Map from './Components/Maps/TestingMap.js'
 import './App.css'
 
 export default function App() {
 
 
-  const searchingPropsObject = {
-    purchaseType: "",
-    immovableType: "",
-    area: ""
-  }
+ 
 
-  const [searchingProps, setSearchingProps] = useState(searchingPropsObject)
-
-  const updateSearchingProps = (propsObject) => {
-    return setSearchingProps(propsObject)
-  }
-
+  
   return (
     <Fragment>
       <Router>
       <Nav></Nav>
         <Switch>
 
-          <Route path="/"  exact={true} render={() =><HomePage updateSearchingProps={updateSearchingProps}></HomePage>}></Route>
+          <Route path="/"  exact={true} render={() =><HomePage ></HomePage>}></Route>
 
           <Route path="/inmuebles"  render={() =>
-            <ImmovablePage searchingProps={searchingProps} > </ImmovablePage>
+            <ImmovablePage > </ImmovablePage>
           }></Route>
          
-          
+          <Route path="/Test" component={Proving}></Route> 
         </Switch>
        
         <Route path="/immovableUnit/:id" component={ImmovableUnit}></Route>

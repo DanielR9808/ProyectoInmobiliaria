@@ -20,7 +20,7 @@ export default function ImmovableComp({ searchingProps}) {
 
     const [query,setQuery]=useState([searchingProps])
     const [immovable, setImmovable] = useState([])
-    const [currentPageUrl, setCurrentPageUrl] = useState('/api/immovable?limit=5&page=1')
+    const [currentPageUrl, setCurrentPageUrl] = useState('/api/immovable?limit=5&page=1&immovable[area]=&immovable[type]=Apartamento&immovable[state]=Compra+Nuevo')
     const [nextPageUrl, setNextPageUrl] = useState('')
     const [prevPageUrl, setPrevPageUrl] = useState('')
 

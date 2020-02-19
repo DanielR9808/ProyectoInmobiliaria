@@ -8,6 +8,9 @@ const ObjectId = require('mongoose').Types.ObjectId;
 router.get('/', pagination(Immovable), async (req, res) => {
   res.json(res.paginatedresults);
 });
+
+
+
 //usar un middleware para traer solo un inmueble y lidiar con las promesas
 router.get('/:id',async (req, res) => {
   const immovable = await Immovable.find({_id: new ObjectId(req.params.id)});
@@ -16,6 +19,7 @@ router.get('/:id',async (req, res) => {
   
   
 });
+
 
 router.post('/', async (req, res) => {
   const immovable = req.body;

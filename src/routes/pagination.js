@@ -1,6 +1,9 @@
 function pagination(model) {
     return async (req, res, next) =>{
-        
+      
+        const area=String(req.query.immovable.area)
+        const immoType=String(req.query.immovable.type)
+        const immoState=String(req.query.immovable.state)
         const page = parseInt(req.query.page)
         const limit = parseInt(req.query.limit)
         const modelLength = await model.countDocuments()
@@ -8,11 +11,14 @@ function pagination(model) {
         const endIndex = page * limit
         
         const results = {}
+
+     
         //se enviara como resultado un objeto con 3 cosas next, previuos y el array de la data
         if (endIndex < modelLength) {  
             results.next = {
                 page: page+1,
                 limit:limit
+             
             }
         }
         if (startIndex > 1) {
@@ -27,8 +33,16 @@ function pagination(model) {
             }
         }
         try {
-            results.results = await model.find().limit(limit).skip(startIndex).exec()
+            if(area===""){
+                results.results = await model.find({ImmobavleType:immoType,ImmovableState:immoState}).limit(limit).skip(startIndex).exec()
+           
+            }else{
+                results.results = await model.find({Neighbourhood:area,ImmobavleType:immoType,ImmovableState:immoState}).limit(limit).skip(startIndex).exec()
+           
+            }
+            
             res.paginatedresults = results
+            
             
             next()
         } catch (error) {

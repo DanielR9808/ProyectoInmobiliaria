@@ -19,7 +19,7 @@ export default function Nav() {
                     <Link className="link" to="/inmuebles">inmuebles</Link>
                 </li>
                 <li>
-                    <Link className="link" to="/map"> Map</Link>
+                    <Link className="link" to="/Test"> Shit</Link>
                 </li>
              
             </ul>
