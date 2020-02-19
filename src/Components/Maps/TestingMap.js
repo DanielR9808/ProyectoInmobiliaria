@@ -4,7 +4,7 @@ import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 import Geocode from "react-geocode";
 
 // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-Geocode.setApiKey('AIzaSyC_M2DuA0YGZm7SMiCwNqg2Lq3fuyPg8JM'	);
+Geocode.setApiKey(	);
  
 // set response language. Defaults to english.
 Geocode.setLanguage("en");
@@ -18,7 +18,7 @@ Geocode.enableDebug();
 
 
 
-const params = {v: '3.exp', key: 'AIzaSyC_M2DuA0YGZm7SMiCwNqg2Lq3fuyPg8JM'	};
+const params = {v: '3.exp', key: 	};
 
 function geocodeGen(address){
   Geocode.fromAddress(address).then(
